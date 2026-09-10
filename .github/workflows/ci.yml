@@ -28,6 +28,7 @@ jobs:
       backend: ${{ steps.filter.outputs.backend }}
       frontend: ${{ steps.filter.outputs.frontend }}
       infra: ${{ steps.filter.outputs.infra }}
+      adabas-seed: ${{ steps.filter.outputs.adabas-seed }}
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
       - uses: dorny/paths-filter@0e4a8c6effa4802afeda77dc8d303f8176d7dfad # v3
@@ -44,6 +45,60 @@ jobs:
             infra:
               - 'infra/**'
               - '**/*.tf'
+            adabas-seed:
+              - 'data/adabas/**'
+              - '01-archaeology/legacy-sifap/adabas-ddms/**'
+              - '.github/workflows/ci.yml'
+
+  adabas-seed:
+    name: Massa Adabas e equivalência PostgreSQL
+    needs: detect-changes
+    if: needs.detect-changes.outputs.adabas-seed == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    services:
+      postgres:
+        image: postgres@sha256:95206741a5b214807675e14165369d05b93a9cf692223b616d07cca227e74b0b # 16
+        env:
+          POSTGRES_DB: sifap_seed_test
+          # Banco efêmero de CI, acessível somente pelo loopback do runner.
+          POSTGRES_HOST_AUTH_METHOD: trust
+        ports:
+          - "127.0.0.1:5432:5432"
+        options: >-
+          --health-cmd "pg_isready -U postgres -d sifap_seed_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      PGHOST: 127.0.0.1
+      PGPORT: "5432"
+      PGUSER: postgres
+      PGDATABASE: sifap_seed_test
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - name: Verificar fixture e contratos de dados
+        run: |
+          set -euo pipefail
+          python3 data/adabas/seed.py verify
+          python3 -m unittest discover -s data/adabas/tests -v
+      - name: Importar, recusar sobrescrita e comparar todos os campos
+        run: |
+          set -euo pipefail
+          python3 data/adabas/seed.py prepare
+          (
+            cd data/adabas/generated
+            psql -X --file=postgres-load.sql
+            if psql -X --file=postgres-load.sql; then
+              echo "::error::Uma segunda carga deveria recusar o schema existente."
+              exit 1
+            else
+              status=$?
+              test "$status" -eq 3
+            fi
+            psql -X --file=postgres-export.sql
+          )
+          python3 data/adabas/seed.py compare --actual-dir data/adabas/generated/actual
 
   natural-format:
     name: Verificação de formato Natural

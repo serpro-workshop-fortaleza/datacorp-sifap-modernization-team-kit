@@ -30,6 +30,7 @@
 | [`adr/`](adr/) | Registros de decisão de arquitetura (um arquivo por decisão) |
 | [`../01-archaeology/glossary.md`](../01-archaeology/glossary.md) | Glossário do domínio — preenchido durante o Estágio 1 |
 | [`legacy-system-access.md`](legacy-system-access.md) | Acesso somente leitura ao sistema Natural/Adabas compartilhado |
+| [`benefits-data.md`](benefits-data.md) | Massa completa de benefícios, carga autorizada no Adabas e comparação no PostgreSQL e nas telas modernas |
 | [`4-agents-explained.md`](4-agents-explained.md) | Explicação dos quatro agentes de estágio e de sua relação com os kits de persona |
 | [`persona-agent-matrix.md`](persona-agent-matrix.md) | Matriz que mostra quem lidera, apoia ou observa em cada estágio |
 | [`sdlc-flow-guide.md`](sdlc-flow-guide.md) | Fluxo completo do dia, handoffs e entregáveis |

@@ -48,6 +48,12 @@ O SIFAP não é apenas material de leitura. Um ambiente compartilhado executa o 
 
 Instruções completas: [`docs/legacy-system-access.md`](docs/legacy-system-access.md).
 
+### Dados completos para a consulta e o modernizado
+
+O kit inclui [500 beneficiários, 2.000 pagamentos, seis programas e 200 eventos de auditoria sintéticos](data/adabas/README.md), com todos os campos dos quatro DDMs, inclusive dependentes, descontos e dados bancários. A massa preserva os registros originais do laboratório, incluindo a Maria do roteiro de consulta.
+
+Siga o [roteiro de carga e conferência](docs/benefits-data.md) para preparar os arquivos Adabas, importar a mesma massa em um PostgreSQL local e comparar todos os registros. A carga no Adabas é exclusiva da operação autorizada; o perfil `viewer` continua somente leitura. A integração dos dados às tabelas e telas modernas faz parte do Estágio 3.
+
 ---
 
 ## Como a imersão está organizada
