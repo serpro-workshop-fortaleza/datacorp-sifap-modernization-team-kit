@@ -2,13 +2,13 @@
 
 > **Trilha:** [Kit do Time](../README.md) › [Documentação](README.md) › **STATUS**
 
-**Painel de acompanhamento da imersão em tempo real:** status dos estágios, handoffs e métricas do dia.
+**Modelo de acompanhamento do próprio time:** preencha o status dos estágios, handoffs e métricas com as evidências produzidas durante a imersão. Este arquivo não informa a disponibilidade de ambientes externos.
 
 ![Painel de status diário](https://img.shields.io/badge/Painel-Status%20di%C3%A1rio-171717?style=flat-square) ![Atualização a cada 30 minutos](https://img.shields.io/badge/Atualiza%C3%A7%C3%A3o-A%20cada%2030%20min-737373?style=flat-square) ![Responsável: Technical Lead](https://img.shields.io/badge/Respons%C3%A1vel-Technical%20Lead-A3A3A3?style=flat-square)
 
 | Campo | Valor |
 |---|---|
-| **Público-alvo** | Technical Lead (atualiza) e facilitador (consulta rapidamente) |
+| **Público-alvo** | Technical Lead (atualiza) e demais participantes do time (consultam) |
 | **Frequência de atualização** | A cada 30 minutos ou em cada transição de estágio |
 | **Resultado esperado** | Visão de uma página do que está pronto, em andamento e bloqueado |
 

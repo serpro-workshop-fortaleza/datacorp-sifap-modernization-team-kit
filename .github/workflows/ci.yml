@@ -1,13 +1,11 @@
 name: CI
 
-# `portugues-br` é a tradução de longa duração do kit do time, não uma branch de funcionalidade.
-# Ela contém as mesmas especificações, o mesmo corpus legado e os mesmos portões de qualidade de
-# `main`, portanto precisa das mesmas verificações.
+# A edição do kit está em `portugues-br`; `main` e `develop` atendem ao fluxo criado pelo time.
 on:
   push:
-    branches: [main, develop, portugues-br, espanol, "spec/**", "impl/**"]
+    branches: [main, develop, portugues-br, "spec/**", "impl/**"]
   pull_request:
-    branches: [main, develop, portugues-br, espanol]
+    branches: [main, develop, portugues-br]
 
 permissions:
   contents: read

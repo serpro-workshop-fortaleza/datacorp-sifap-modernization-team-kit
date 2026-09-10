@@ -935,11 +935,9 @@ PRAGMA_RE = re.compile(r"<!--\s*markdownlint-disable")
 # O evento é uma imersão. "hackath?on" também cobre a grafia incorreta "hackaton";
 # uma regex anterior, `hackat[o]?on`, não correspondia a nenhuma das duas grafias.
 EVENT_TERM_RE = re.compile(r"hackath?ons?|workshops?", re.IGNORECASE)
-# Identificadores reais que contêm legitimamente uma palavra proibida: slugs de
-# organização e Enterprise do GitHub, um repositório ativo e uma tag do Azure
-# aplicada ao laboratório.
+# Identificadores técnicos reais podem conter o termo sem nomear o evento.
 EVENT_TERM_ALLOWED_RE = re.compile(
-    r"workshop-gbb|software-gbb-workshops|workshop-datacorp|"
+    r"serpro-workshop-fortaleza|workshop-gbb|software-gbb-workshops|workshop-datacorp|"
     r"workshop-legacy-modernization|team=workshop-XX"
 )
 STALE_RE = re.compile("|".join(re.escape(name) for name in STALE_PATHS))

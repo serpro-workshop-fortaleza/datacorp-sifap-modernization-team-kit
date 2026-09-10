@@ -1,8 +1,10 @@
-# Roteiro da demonstração
+# Roteiro da apresentação do time
 
-> **Trilha:** [Kit do Time](../README.md) › [Documentação](README.md) › **Roteiro da demonstração**
+> **Trilha:** [Kit do Time](../README.md) › [Documentação](README.md) › **Apresentação do time**
 
 **Estrutura para a apresentação final da imersão** — o time define o conteúdo com base no que produziu.
+
+Este é um modelo para os participantes organizarem suas próprias evidências, não uma demonstração pronta nem um roteiro do instrutor.
 
 | Campo | Valor |
 |---|---|

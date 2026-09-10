@@ -16,12 +16,12 @@ O kit usa **duas camadas de agentes** (um kit de persona por pessoa + um agente 
 
 Use as skills em [`.github/skills/`](skills/) para fluxos de trabalho especializados. O Copilot seleciona a skill pertinente por sua descrição; não duplique fluxos especializados nestas instruções globais.
 
-## Idiomas do repositório
+## Escopo e idioma do kit
 
-- Mantenha a documentação e toda a prosa das primitivas do Copilot (agentes, prompts, instruções, skills e hooks) da `main` e da `develop` em inglês; publique português do Brasil na `portugues-br` e espanhol na `espanol`.
-- Siga o idioma da branch de destino, não o da conversa. Nunca faça merge da árvore de documentação traduzida na `main`.
-- Preserve caminhos técnicos, identificadores e fontes legadas. Mantenha o [seletor de idiomas](../README.md#idiomas-do-repositório) ligado às branches existentes e às respectivas instruções.
-- O portal de documentação em `site/` usa Astro + React, separado da aplicação SIFAP. Seus dicionários de interface traduzida são permitidos na `main`; a documentação permanece em inglês. Consulte o [ADR-0002](../docs/adr/0002-trilingual-documentation-portal.md).
+- Este kit é exclusivo dos participantes: guias, modelos, primitivas do Copilot e fontes locais para os exercícios. Não inclua portal de documentação, apresentações do instrutor, demonstrações prontas, gabaritos ou soluções de referência.
+- A edição publicada está em português do Brasil na branch `portugues-br`. Mantenha esse idioma na documentação e na prosa das primitivas desta edição.
+- Preserve caminhos técnicos, identificadores e fontes legadas. Não crie links para branches ou edições de idioma que não existem neste repositório.
+- Não publique endereços, credenciais nem instruções de acesso ou operação dos ambientes do instrutor. Os participantes constroem e documentam a própria solução durante a imersão.
 
 ## Stack-alvo
 
@@ -65,7 +65,7 @@ As regras detalhadas de Java, TypeScript, banco de dados, segurança, infraestru
 
 ## Regras rígidas — não faça isto
 
-- Não presuma um protótipo de aplicação preexistente, uma conteinerização herdada nem infraestrutura da imersão. `backend/`, `frontend/` e `infra/` ainda não existem; a equipe cria apenas o necessário para o recorte selecionado nos Estágios 3 e 4. O visualizador Natural/Adabas compartilhado é externo e somente leitura; nunca tente provisioná-lo ou administrá-lo a partir deste repositório.
+- Não presuma um protótipo de aplicação preexistente, uma conteinerização herdada nem infraestrutura da imersão. `backend/`, `frontend/` e `infra/` ainda não existem; a equipe cria apenas o necessário para o recorte selecionado nos Estágios 3 e 4. Os fontes locais são insumos para leitura e rastreabilidade, não um laboratório para implantar ou administrar.
 - Não escreva um requisito EARS sem `source_legacy:`; a CI rejeitará a PR.
 - Não adicione dependências sem justificativa em um ADR.
 - Não escreva testes depois; escreva-os durante a implementação.
@@ -83,5 +83,4 @@ As regras detalhadas de Java, TypeScript, banco de dados, segurança, infraestru
 - Kits de persona (leia 2 por pessoa; os artefatos ativos já estão consolidados em `.github/`): [`05-personas/`](../05-personas/)
 - Agentes de estágio: [`06-stage-agents/`](../06-stage-agents/)
 - Sistema legado SIFAP: [`01-archaeology/legacy-sifap/`](../01-archaeology/legacy-sifap/)
-- Visualizador do sistema legado: [`docs/legacy-system-access.md`](../docs/legacy-system-access.md)
 - SDD com Spec-Kit: <https://github.com/github/spec-kit>

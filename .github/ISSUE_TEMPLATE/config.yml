@@ -1,8 +1,8 @@
 blank_issues_enabled: true
 contact_links:
   - name: 📖 Referência do fluxo da equipe
-    url: https://github.com/workshop-gbb/datacorp-sifap-modernization-team-kit/blob/portugues-br/00-TEAM-FLOW.md
+    url: https://github.com/serpro-workshop-fortaleza/datacorp-sifap-modernization-team-kit/blob/portugues-br/00-TEAM-FLOW.md
     about: Como 5 pessoas cobrem 10 personas — leia antes de abrir qualquer solicitação.
-  - name: 🤝 Precisa de um facilitador
-    url: https://github.com/workshop-gbb/datacorp-sifap-modernization-team-kit/blob/portugues-br/docs/FAQ.md
-    about: Está sem avançar há 20 minutos? Levante a mão para chamar a equipe de cordão azul.
+  - name: 🤝 Dúvidas dos participantes
+    url: https://github.com/serpro-workshop-fortaleza/datacorp-sifap-modernization-team-kit/blob/portugues-br/docs/FAQ.md
+    about: Consulte a FAQ para dúvidas sobre as atividades da imersão.
