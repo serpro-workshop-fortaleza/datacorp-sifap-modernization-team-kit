@@ -2,7 +2,7 @@
 
 > **Trilha:** [Kit do time](README.md) › **Comece aqui**
 
-**Idioma:** português do Brasil (`portugues-br`). O [seletor de idiomas e instruções do Copilot](README.md#idiomas-do-repositório) também leva à edição em inglês.
+**Idioma:** português do Brasil (`portugues-br`). Este é o ponto de entrada do kit dos participantes.
 
 **Se você acabou de chegar e quer saber "e agora, o que eu faço?", esta página é para você.** Não importa se você é Product Owner, Tech Writer, Developer, analista de negócio ou DBA. Os 15 minutos abaixo funcionam para todo mundo.
 

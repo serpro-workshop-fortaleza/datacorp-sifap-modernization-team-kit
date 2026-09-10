@@ -2,7 +2,7 @@
 
 > **Trilha:** [Kit do Time](../README.md) › **Documentação**
 
-**Idioma:** português do Brasil (`portugues-br`). Use o [seletor de idiomas](../README.md#idiomas-do-repositório) para abrir a documentação e as instruções do Copilot de cada branch.
+**Idioma:** português do Brasil (`portugues-br`). Toda a documentação deste kit pode ser lida diretamente no repositório.
 
 **Índice da documentação transversal da imersão** — recursos usados em qualquer estágio do dia.
 
@@ -29,12 +29,12 @@
 |---|---|
 | [`adr/`](adr/) | Registros de decisão de arquitetura (um arquivo por decisão) |
 | [`../01-archaeology/glossary.md`](../01-archaeology/glossary.md) | Glossário do domínio — preenchido durante o Estágio 1 |
-| [`legacy-system-access.md`](legacy-system-access.md) | Acesso somente leitura ao sistema Natural/Adabas compartilhado |
 | [`4-agents-explained.md`](4-agents-explained.md) | Explicação dos quatro agentes de estágio e de sua relação com os kits de persona |
 | [`persona-agent-matrix.md`](persona-agent-matrix.md) | Matriz que mostra quem lidera, apoia ou observa em cada estágio |
 | [`sdlc-flow-guide.md`](sdlc-flow-guide.md) | Fluxo completo do dia, handoffs e entregáveis |
 | `api.md` _(criado pelo time)_ | Visão geral do OpenAPI e resumo dos endpoints |
-| [`runbook.md`](runbook.md) | Como executar o sistema localmente, na CI e no Azure |
+| [`runbook.md`](runbook.md) | Modelo para documentar a execução e a operação da solução criada pelo time |
+| [`demo-script.md`](demo-script.md) | Roteiro para apresentar o trabalho produzido pelos participantes |
 
 ## Convenções
 

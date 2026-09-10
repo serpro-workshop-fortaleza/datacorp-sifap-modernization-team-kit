@@ -31,22 +31,23 @@ Comece por [`00-START-HERE.md`](00-START-HERE.md).
 
 ---
 
-## Consulte o sistema legado no ar
+## Escopo do kit dos participantes
 
-O SIFAP não é apenas material de leitura. Um ambiente compartilhado executa o sistema Natural/Adabas real com dados sintéticos. Participantes recebem acesso **somente leitura** à tela de consulta de beneficiários; implantação e administração ficam fora do exercício do time.
+Este repositório contém somente os materiais para o time realizar a imersão, em português do Brasil.
+A leitura e as atividades são feitas pelos arquivos do repositório, no GitHub ou no VS Code.
 
-| O quê | Onde |
+| Incluído | Finalidade |
 |---|---|
-| **Terminal de consulta** | <https://sifap-lab-438k30.eastus2.cloudapp.azure.com/terminal/> |
-| **Usuário** | `viewer` |
-| **Senha** | Compartilhada em particular pelo facilitador; nunca versionada |
-| **Permitido** | Consultar dados de beneficiários no programa `VIEWBENF`, que é somente leitura |
-| **Não permitido** | Administração do Adabas, linha de comando do Natural, cadastros, jobs batch ou acesso à infraestrutura |
+| Guias dos quatro estágios e kits de persona | Orientar o trabalho de cada participante |
+| Fontes Natural, DDMs, FDT e documentos históricos locais | Servir de insumo para a investigação e a rastreabilidade dos exercícios |
+| Modelos de especificação, decisão, acompanhamento e apresentação | Ser preenchidos com as descobertas e entregas do próprio time |
+| Primitivas do Copilot e verificações de CI | Apoiar a implementação e a validação realizadas pelos participantes |
 
 > [!IMPORTANT]
-> Use somente a credencial `viewer`. O ambiente é compartilhado, contém dados sintéticos e é operado fora deste repositório público. Se a URL não responder, avise o facilitador; não tente implantar nem reparar o laboratório.
-
-Instruções completas: [`docs/legacy-system-access.md`](docs/legacy-system-access.md).
+> O site e seu processo de publicação pertencem ao repositório do instrutor, não a este kit.
+> Este repositório não distribui demos prontas, gabaritos, soluções legadas ou modernas em execução,
+> nem acessos e instruções de operação dos ambientes do instrutor.
+> O código local do legado é material de leitura; cada time constrói sua própria solução.
 
 ---
 

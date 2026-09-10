@@ -18,7 +18,7 @@
 > **Leia primeiro:** [`LEGACY-EXPLORATION-CHECKLIST.md`](LEGACY-EXPLORATION-CHECKLIST.md) — gate obrigatório antes de começar o Estágio 2. Nenhum requisito EARS é aceito sem rastreabilidade até o código legado.
 
 > [!TIP]
-> **O sistema está no ar, não apenas arquivado.** Os mesmos programas que você está prestes a ler executam em um ambiente compartilhado em <https://sifap-lab-438k30.eastus2.cloudapp.azure.com> — `/terminal/` abre uma sessão Natural real contra os arquivos Adabas carregados. Peça as credenciais ao facilitador. Ler o código-fonte continua sendo o gate; o sistema no ar existe para tornar a evidência concreta.
+> **Use o corpus local como evidência.** Os programas Natural, DDMs, FDT e documentos históricos estão em [`legacy-sifap/`](legacy-sifap/). A investigação deste estágio não depende de acesso a um sistema em execução.
 
 ---
 
@@ -57,7 +57,7 @@ As 5 duplas trabalham em paralelo, cada uma responsável por 3 programas Natural
 
 O código legado está em [`legacy-sifap/`](legacy-sifap/) (compartilhado pelo kit).
 
-O laboratório compartilhado do Azure é operado fora deste repositório. Participantes não recebem material de implantação ou administração; use o visualizador somente leitura descrito em [`docs/legacy-system-access.md`](../docs/legacy-system-access.md).
+Esses arquivos são insumos de leitura dos participantes. Não os altere nem tente usá-los para implantar um laboratório; registre suas descobertas nos artefatos do estágio.
 
 ---
 
