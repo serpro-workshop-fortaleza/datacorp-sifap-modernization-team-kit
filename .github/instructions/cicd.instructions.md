@@ -13,6 +13,7 @@ Este arquivo é ativado quando você edita workflows em `.github/workflows/`, ac
 |---|---|---|
 | `ci.yml` · `detect-changes` | `dorny/paths-filter` define outputs de `backend`/`frontend`/`infra` para que os jobs posteriores executem somente em mudanças pertinentes | n/a |
 | `ci.yml` · `natural-format` | Falha quando o código Natural usa declarações de formato decimal com vírgula, como `(P9,2)`, em vez do formato com ponto `(P9.2)` do Natural CE | Sim |
+| `ci.yml` · `adabas-seed` | Valida a massa sintética completa, seus hashes e contratos PE/MU; importa/exporta todos os campos em PostgreSQL 16 efêmero e recusa sobrescrever um schema existente. Não acessa o Adabas compartilhado | Sim |
 | `ci.yml` · `backend` | JDK 21 (temurin) + `./mvnw -B verify`; envia o relatório Jacoco | Sim |
 | `ci.yml` · `frontend` | pnpm 9 + Node 20; `pnpm lint`, `pnpm typecheck`, `pnpm test --run --coverage` | Sim |
 | `ci.yml` · `infra` | `terraform fmt -check -recursive`, depois `init -backend=false` + `validate` por módulo | Sim |

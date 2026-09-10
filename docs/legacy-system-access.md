@@ -25,6 +25,12 @@ O terminal de consulta abre o programa Natural gerado `VIEWBENF`.
 
 O visualizador fornece acesso somente leitura no nível da aplicação a um runtime compartilhado. Ele não é um tenant separado nem uma cópia privada do banco de dados.
 
+## Dados para conferir
+
+Use o [roteiro de dados de benefícios](benefits-data.md) para consultar a Maria por CPF/NIS e comparar os quatro pagamentos esperados. O [pacote de dados completo](../data/adabas/README.md) contém os registros sintéticos dos quatro arquivos Adabas, com preparação offline de carga, exportação CSV e importação local no PostgreSQL.
+
+O snapshot não comprova o estado atual do ambiente online. Se os dados divergirem, peça ao facilitador que confira a carga; não execute manutenção pelo visualizador.
+
 ## Se o acesso falhar
 
 1. Confirme que você usou a URL exata com `/terminal/`.

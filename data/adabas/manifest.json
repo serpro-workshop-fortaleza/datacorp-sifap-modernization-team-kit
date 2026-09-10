@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "fixture": "sifap-benefits-20180314-v1",
+  "synthetic": true,
+  "reference_date": "2018-03-14",
+  "source": {
+    "description": "Massa sintetica original do laboratorio SIFAP; nenhuma consulta a dados de producao.",
+    "commit": "f0ce4366e9228570dc4114a6c13eae824783530e",
+    "conversion": "BCD e numeros fixos para strings exatas; sem recalculo, correcao ou sorteio de dados."
+  },
+  "datasets": {
+    "social-program": {
+      "file_number": 151,
+      "ddm": "01-archaeology/legacy-sifap/adabas-ddms/SOCPROG.ddm",
+      "ddm_sha256": "f83ad12245628941e12ff09b3bedd7e3b6d9b0f50f68339955d23a5256932bf4",
+      "key": "COD-PROGRAM",
+      "records": 6,
+      "fields": 41,
+      "record_bytes": 361,
+      "jsonl_sha256": "fff08fbf11a993b14f164bd93708f2c8d165fa4994ddf156c68374d6702aa091",
+      "fixed_sha256": "55cc272b3413532451bb84306812a9daebb0b97511253b567db53907fd615ca7",
+      "adacmp_sha256": "f8960c8f6c28bc3de23bf38f889add28e9ff6c31e311affabcda8753e29e002d"
+    },
+    "beneficiary": {
+      "file_number": 150,
+      "ddm": "01-archaeology/legacy-sifap/adabas-ddms/BENEFIC.ddm",
+      "ddm_sha256": "ecee47167fe9aac329803f334bd532b3074092c54ca323486780eef3143bb72d",
+      "key": "NUM-REGISTRATION",
+      "records": 500,
+      "fields": 69,
+      "record_bytes": 1739,
+      "jsonl_sha256": "fde7ebfa3cfecce0e85105a4205fafc0935fbf63ec962ca7798a3f13e8e35fac",
+      "fixed_sha256": "331ce419bdd90853f34e52bf2466bc79bfcfd6db23a27228333e753dbd3abccc",
+      "adacmp_sha256": "e8432bbb970a03a965e73fa7ab2d07f04fedb7b9f7d4bfaca147ea3332a07f65"
+    },
+    "payment": {
+      "file_number": 152,
+      "ddm": "01-archaeology/legacy-sifap/adabas-ddms/PAYMENT.ddm",
+      "ddm_sha256": "c2c05408438d2dac03b1ce586012f341b2666dc3b92579dd9eecc00f95554da3",
+      "key": "NUM-PAYMENT",
+      "records": 2000,
+      "fields": 57,
+      "record_bytes": 855,
+      "jsonl_sha256": "53568ade9531f01b9bf5b74013c189dd501f898c7dd099b123cfa80bdde04a6f",
+      "fixed_sha256": "442bc6e661c34a095a9a59202e98b497974d7efcedb43887e5bd232dc5d7392b",
+      "adacmp_sha256": "4dc91941fb8cc6c40719ca48cb6787d41e19bed705cf8774cf9fbcff6b343043"
+    },
+    "audit": {
+      "file_number": 153,
+      "ddm": "01-archaeology/legacy-sifap/adabas-ddms/AUDIT.ddm",
+      "ddm_sha256": "e7b515b80ef47ad782c13de7b658875c8a736e2884ccc62194c0fdc5c1a5d955",
+      "key": "NUM-AUDIT",
+      "records": 200,
+      "fields": 32,
+      "record_bytes": 4995,
+      "jsonl_sha256": "ff6b0ded6eb703f4148410da25163139aca7419b4c04089c4a4b9a77365b160b",
+      "fixed_sha256": "74d4810a1d3783cfd61e4227e6ab89bada999165c8d29996675a1c54527dba7f",
+      "adacmp_sha256": "38a97e7b34c0ce7829878ddd10f968312613e22ea31529ba5452ff5bc5db69fd"
+    }
+  },
+  "profile": {
+    "records": {
+      "social-program": 6,
+      "beneficiary": 500,
+      "payment": 2000,
+      "audit": 200
+    },
+    "periods": [
+      {
+        "period": "201710",
+        "records": 500,
+        "AMT-GROSS": "160077.84",
+        "AMT-DISC-TOTAL": "2190.80",
+        "AMT-NET": "157887.19"
+      },
+      {
+        "period": "201711",
+        "records": 500,
+        "AMT-GROSS": "160077.84",
+        "AMT-DISC-TOTAL": "2190.80",
+        "AMT-NET": "157887.19"
+      },
+      {
+        "period": "201712",
+        "records": 500,
+        "AMT-GROSS": "181771.34",
+        "AMT-DISC-TOTAL": "2853.01",
+        "AMT-NET": "178918.48"
+      },
+      {
+        "period": "201801",
+        "records": 500,
+        "AMT-GROSS": "160143.31",
+        "AMT-DISC-TOTAL": "2190.80",
+        "AMT-NET": "157952.66"
+      }
+    ],
+    "beneficiary_status": {
+      "A": 475,
+      "C": 4,
+      "D": 8,
+      "I": 6,
+      "S": 7
+    },
+    "payment_status": {
+      "C": 576,
+      "D": 284,
+      "E": 284,
+      "G": 284,
+      "P": 288,
+      "R": 284
+    },
+    "observed_anomalies": {
+      "gross_minus_discount_differs_from_net": 20,
+      "pending_with_confirmation_date": 288,
+      "non_reversal_with_origin": 1976
+    }
+  }
+}

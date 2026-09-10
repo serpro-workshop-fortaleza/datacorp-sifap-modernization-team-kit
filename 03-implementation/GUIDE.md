@@ -119,6 +119,8 @@ src/main/java/br/gov/client/sifap/
 
 ## Passo a passo: adicione uma feature
 
+Para os recortes de beneficiários e pagamentos, use a [massa sintética completa e o roteiro de reconciliação](../docs/benefits-data.md). O pacote fornece todos os campos dos quatro DDMs e uma carga no schema local `sifap_seed`; o time ainda precisa importar para suas tabelas de domínio, consultar pela API e exibir esses registros na UI. Não substitua a massa por valores fixos nos componentes.
+
 - [ ] **Releia o requisito EARS.** Abra o `spec.md` e releia o REQ-ID que será implementado.
 - [ ] **Verifique a evidência legada.** Confirme o `source_legacy:` e releia o programa `.NSN` correspondente.
 - [ ] **Modele o comportamento.** Defina a entidade, os casos de uso e os contratos REST no contexto correto.
