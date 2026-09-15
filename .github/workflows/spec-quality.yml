@@ -1,10 +1,9 @@
 name: Análise de Markdown e qualidade das especificações
 
-# `portugues-br` espelha todo o kit em pt-BR, portanto precisa das mesmas verificações de Markdown,
-# primitivas e rastreabilidade que `main`. Consulte a mesma observação em ci.yml.
+# Valida o kit em português e os artefatos produzidos nas branches de trabalho do time.
 on:
   push:
-    branches: [main, develop, portugues-br, espanol, "spec/**"]
+    branches: [main, develop, portugues-br, "spec/**"]
   pull_request:
     paths:
       - ".github/workflows/spec-quality.yml"
@@ -116,19 +115,6 @@ jobs:
                           requirement_reference_pattern.findall(
                               path.read_text(encoding="utf-8", errors="ignore")
                           )
-                      )
-
-          portal_tests = Path("site/tests")
-          if portal_tests.is_dir():
-              for path in portal_tests.rglob("*"):
-                  if path.is_file() and is_test_file(path):
-                      try:
-                          test_source = path.read_text(encoding="utf-8")
-                      except UnicodeDecodeError:
-                          print(f"::warning file={path}::Entrada de teste sem UTF-8 ignorada no relatório informativo de REQ-IDs.")
-                          continue
-                      test_requirements.update(
-                          requirement_reference_pattern.findall(test_source)
                       )
 
           missing = sorted(spec_requirements - test_requirements)

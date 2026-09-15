@@ -35,8 +35,8 @@ Todos os artefatos ativos ficam no diretório `.github/` da raiz do repositório
 | `.github/prompts/persona-tech-writer-update-codemap.prompt.md` | Prompt | `/update-codemap` |
 | `.github/prompts/persona-tech-writer-doc-drift.prompt.md` | Prompt | `/doc-drift` |
 
-> [!TIP]
-> Se a pessoa facilitadora solicitar uma configuração local de MCP e este kit tiver `mcp.json`, copie somente esse arquivo para `.vscode/mcp.json`.
+> [!NOTE]
+> Edite e revise o Markdown do time diretamente no repositório. Esta persona dos participantes não distribui servidor de implantação no Pages; a publicação do site pertence ao repositório do instrutor.
 
 ## Onde ficam os artefatos ativos
 

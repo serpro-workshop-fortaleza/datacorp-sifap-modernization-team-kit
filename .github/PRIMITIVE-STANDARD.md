@@ -24,13 +24,13 @@ Suporte = Instruções + Restrições + Retorno + Memória + Avaliação + Gover
 
 Prefira atualizar uma primitiva existente em vez de adicionar outra quase duplicada.
 
-Os [metadados de idioma](language.json) da branch identificam sua edição. O validador reconhece títulos estruturais equivalentes em espanhol na `espanol`; traduzir prosa nunca altera os schemas do frontmatter nem identificadores técnicos.
+Os [metadados de idioma](language.json) identificam a edição em português do Brasil deste kit. Adaptar a prosa nunca altera os schemas do frontmatter nem identificadores técnicos.
 
 ## Regras aplicáveis a todas as primitivas
 
 ### Markdown e estilo
 
-- [ ] Inglês na `main` e na `develop`; português do Brasil na `portugues-br`; espanhol na `espanol`, incluindo a prosa das primitivas. Siga a [política de idiomas](../README.md#idiomas-do-repositório), preservando caminhos, identificadores e schemas. Mantenha os nomes técnicos oficiais. Não use emojis; comunique NOTE, TIP, IMPORTANT, WARNING e CAUTION com alertas GFM como `> [!NOTE]`.
+- [ ] Português do Brasil na edição `portugues-br`, incluindo a prosa das primitivas. Respeite o [escopo do kit dos participantes](../README.md), preservando caminhos, identificadores e schemas. Mantenha os nomes técnicos oficiais. Não use emojis; comunique NOTE, TIP, IMPORTANT, WARNING e CAUTION com alertas GFM como `> [!NOTE]`.
 - [ ] Exatamente um H1 (`#`) por arquivo: o título do documento, abaixo do frontmatter. O validador de primitivas impõe esta regra; a MD025 do markdownlint (vários títulos de nível superior) está desativada.
 - [ ] A linha em branco entre o `---` de fechamento e o H1 é opcional, e as duas formas passam no lint: agentes, prompts e skills a omitem, enquanto os arquivos de instruções a mantêm. A MD022 não dispara no limite do frontmatter e não é sobrescrita. Siga os arquivos vizinhos no mesmo diretório em vez de forçar um diff sem outra finalidade.
 - [ ] Nunca pule um nível de título; use `#`, depois `##` e então `###`.

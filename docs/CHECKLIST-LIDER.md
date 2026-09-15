@@ -45,7 +45,7 @@
 - [ ] **11:45** — Cada dupla registrou evidências e perguntas sobre seus programas atribuídos.
 
 > [!TIP]
-> **Os mistérios usam um denominador de 20** (quatro por dupla). O gabarito **não fica neste repositório** porque o repositório é público; os facilitadores o recebem por um canal privado. Nunca projete o gabarito. Uma dica não reduz a pontuação, mas uma dupla bloqueada por mais de 40 minutos reduz: forneça a dica.
+> **Os mistérios usam um denominador de 20** (quatro por dupla). Registre as evidências descobertas pelo time, sem antecipar respostas. Se uma dupla ficar bloqueada por mais de 40 minutos, peça uma dica para continuar a investigação.
 
 ### 13:30–14:00 · Estágio 1 — Síntese e handoff H1
 

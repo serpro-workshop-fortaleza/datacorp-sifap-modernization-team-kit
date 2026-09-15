@@ -19,8 +19,6 @@ Este arquivo é ativado quando você edita workflows em `.github/workflows/`, ac
 | `spec-quality.yml` · `markdown-lint` | `markdownlint-cli2` em `**/*.md` | Sim |
 | `spec-quality.yml` · `spec-traceability` | Informa REQ-IDs em `specs/` ainda não referenciados por um teste (emite `::warning::`) | Não |
 | `spec-quality.yml` · `legacy-traceability` | Todo REQ-ID em `specs/` deve possuir uma linha `source_legacy:` válida | Sim |
-| `pages.yml` · `build` | Resolve os três snapshots de idioma, executa testes unitários e de navegador do portal e rejeita arquivos, links, âncoras ou downloads originais incompletos | Sim |
-| `pages.yml` · `deploy` | Verifica novamente a visibilidade do Pages; um repositório privado não pode publicar com acesso público ou desconhecido | Sim |
 
 > [!IMPORTANT]
 > `legacy-traceability` reprova o build; `spec-traceability` somente alerta. Consulte [`requirements.instructions.md`](requirements.instructions.md) para ver o formato exato de `source_legacy:` aceito pelo portão.

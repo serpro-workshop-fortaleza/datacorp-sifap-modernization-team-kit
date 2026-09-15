@@ -1,17 +1,18 @@
-# Runbook operacional
+# Modelo de runbook do time
 
 ![Tipo: runbook](https://img.shields.io/badge/Tipo-Manual%20operacional-171717?style=flat-square)
 ![Responsável: DevOps](https://img.shields.io/badge/Respons%C3%A1vel-DevOps-737373?style=flat-square)
 
 > **Trilha:** [Kit do Time](../README.md) › [Documentação](README.md) › **Runbook**
 
-**Guia operacional para executar, verificar e diagnosticar o ambiente da imersão.**
+**Modelo para documentar como executar, verificar e diagnosticar a solução criada pelos participantes.**
+Preencha-o com comandos e evidências do próprio time; ele não descreve nem dá acesso a ambientes do instrutor.
 
 | Campo | Valor |
 |---|---|
 | **Público-alvo** | DevOps Engineer e o time inteiro |
 | **Pré-requisitos** | Setup local concluído conforme [`00-SETUP.md`](../00-SETUP.md) |
-| **Resultado esperado** | Ambiente local funcionando, CI compreensível e escalonamento correto |
+| **Resultado esperado** | Execução da solução do time documentada, CI compreensível e bloqueios registrados |
 
 ---
 
@@ -37,7 +38,7 @@ Depois de criar o protótipo, documente:
 | Health do backend | — |
 | Swagger UI | — |
 | Frontend local | — |
-| Credenciais da demonstração | — |
+| Forma de configurar a autenticação local, sem registrar senhas | — |
 
 ---
 
@@ -58,14 +59,14 @@ cd backend && ./mvnw test
 - [ ] **Execute os testes do frontend** (quando `frontend/` existir):
 
 ```bash
-cd frontend && npm test
+cd frontend && pnpm test
 ```
 
 ---
 
 ## CI — Entenda os fluxos de trabalho
 
-A CI é executada automaticamente em pushes para `main`, `develop`, `spec/**` e `impl/**`.
+A CI também cobre a edição `portugues-br` do template. No repositório do time, acompanha o fluxo de `main`, `develop`, `spec/**` e `impl/**`.
 
 | Arquivo de fluxo de trabalho | O que verifica | Quando é executado |
 |---|---|---|
@@ -77,19 +78,16 @@ A CI é executada automaticamente em pushes para `main`, `develop`, `spec/**` e 
 
 ---
 
-## Azure — Estágio 4
+## Infraestrutura criada pelo time — Estágio 4
 
-O Estágio 4 é o momento em que o time aplica o Terraform a uma assinatura de sandbox fornecida pelos facilitadores.
+O kit não inclui recursos provisionados, arquivos de estado nem configuração de uma assinatura.
+Se o escopo do time incluir infraestrutura, use o [guia do Estágio 4](../04-evolution/GUIDE.md) e documente somente o que a equipe criar.
 
-> [!CAUTION]
-> Cada time tem uma única cota de assinatura. Marque todos os recursos com `team=workshop-XX` ou `apply` falhará.
-
-```bash
-cd infra
-terraform init
-terraform plan -var-file=envs/dev/terraform.tfvars
-terraform apply -var-file=envs/dev/terraform.tfvars
-```
+- [ ] Registre os módulos e arquivos de configuração realmente existentes.
+- [ ] Registre os comandos de validação e o resultado da revisão do plano.
+- [ ] Confirme permissões e limites antes de qualquer implantação.
+- [ ] Descreva a autenticação sem versionar segredos, tokens ou arquivos de estado.
+- [ ] Se não houver implantação, registre essa limitação; não apresente um ambiente como pronto.
 
 ---
 
@@ -100,8 +98,8 @@ terraform apply -var-file=envs/dev/terraform.tfvars
 | O ambiente local trava | A porta 5432, 8080 ou 3000 já está em uso | Execute `lsof -i :5432` e encerre o processo | O serviço inicia sem erro de porta |
 | `mvn verify` falha no Testcontainers | O Docker não está em execução | Inicie o Docker Desktop | Os testes passam na próxima execução |
 | `pnpm test` falha nos snapshots | O componente foi alterado intencionalmente | Execute `pnpm test -- -u` para atualizar os snapshots | Os testes passam após a atualização |
-| `terraform apply` é rejeitado | O recurso não tem a tag `team=` | Adicione a tag ao recurso que falhou | `terraform plan` não apresenta erros de validação |
-| O GitHub Actions não consegue acessar o Azure | Divergência na declaração do subject OIDC | Execute `az ad sp create-for-rbac` novamente para o time | O fluxo de trabalho passa na próxima execução |
+| O plano de infraestrutura é rejeitado | A configuração não atende aos limites ou políticas autorizados para o time | Leia o diagnóstico e revise o plano antes de implantar | O plano revisado passa nas validações |
+| O GitHub Actions não consegue acessar o Azure | A configuração de autenticação não corresponde ao repositório, à branch ou ao ambiente do time | Confira a configuração OIDC autorizada e solicite ajuda ao responsável pelo acesso | O fluxo de trabalho autentica sem segredos versionados |
 
 ---
 

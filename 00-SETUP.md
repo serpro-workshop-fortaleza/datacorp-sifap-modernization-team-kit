@@ -60,7 +60,7 @@ No seu laptop, você clona só o repositório do seu time:
 | `immersion-team-XX` | Todo o seu trabalho vai para cá | `github.com/<IMMERSION_ORG>/immersion-team-XX` (privado, você cria) |
 
 > [!NOTE]
-> A organização exata será informada pelos facilitadores no dia da imersão. Ela pertencerá ao Enterprise [software-gbb-workshops](https://github.com/enterprises/software-gbb-workshops).
+> A organização desta edição é [`serpro-workshop-fortaleza`](https://github.com/serpro-workshop-fortaleza). Nos comandos abaixo, substitua `<IMMERSION_ORG>` por esse nome e use o repositório do seu time.
 
 > [!IMPORTANT]
 > Nunca faça push no repositório principal da imersão. Os commits do seu time vão só para `immersion-team-XX`. O **Sistema de Fiscalização e Administração de Pagamentos (SIFAP)** legado já vem no kit em `01-archaeology/legacy-sifap/` e é material de leitura, não de edição.
@@ -103,23 +103,22 @@ No seu laptop, você clona só o repositório do seu time:
 
 - [ ] **Crie o repositório a partir do template.**
 
-1. Abra o [kit público do time](https://github.com/workshop-gbb/datacorp-sifap-modernization-team-kit/tree/main).
+1. Abra o [kit público dos participantes](https://github.com/serpro-workshop-fortaleza/datacorp-sifap-modernization-team-kit/tree/portugues-br).
 2. Clique em **Use this template** -> **Create a new repository**.
 3. Preencha:
 
-- **Owner**: a organização da imersão informada pelos facilitadores, dentro do Enterprise `software-gbb-workshops`. Não escolha seu usuário pessoal.
+- **Owner**: `serpro-workshop-fortaleza`. Não escolha seu usuário pessoal.
 - **Repository name**: `immersion-team-XX` (troque XX pelo número do seu time, por exemplo `immersion-team-01`)
 - **Description**: `Imersão DATACORP 2026 - Time XX`
 - **Visibility**: Private
-- **Include all branches**: deixe desmarcado. Copie somente a `main` em inglês; o Passo 3 cria a `develop` a partir do mesmo histórico.
+- **Include all branches**: deixe desmarcado. Copie somente a edição `portugues-br`; o Passo 3 prepara as branches de trabalho na cópia do time.
 
 4. Clique em **Create repository**.
 
 Agora você deve ver uma cópia completa do kit em `https://github.com/<IMMERSION_ORG>/immersion-team-XX`, incluindo documentação, código legado, templates, workflows e arquivos `.github/`.
 
-O template usa a `main` por padrão, mesmo quando você navega por uma branch traduzida antes de criar o repositório.
-Para ler em português, abra a [edição em português do Brasil](https://github.com/workshop-gbb/datacorp-sifap-modernization-team-kit/tree/portugues-br).
-Mantenha a `main` e a `develop` do time em inglês; branches de idioma não são branches de integração.
+O template usa `portugues-br` como branch padrão. A cópia contém o material dos participantes em português, sem site, demos prontas ou ambientes do instrutor.
+As branches `main` e `develop` do exercício são preparadas **somente no repositório do time**, no passo seguinte.
 
 ---
 
@@ -132,13 +131,23 @@ Mantenha a `main` e a `develop` do time em inglês; branches de idioma não são
 mkdir -p ~/Code && cd ~/Code
 
 # 2. Clone o repositório do seu time
-git clone --branch main https://github.com/<IMMERSION_ORG>/immersion-team-01.git
+git clone https://github.com/<IMMERSION_ORG>/immersion-team-01.git
 cd immersion-team-01
 
 # 3. Confirme que o template veio intacto
 ls 01-archaeology/legacy-sifap .github/agents .github/prompts .github/instructions .github/skills
 
-# 4. Crie a branch de integração do time
+# 4. Prepare main na cópia recém-criada e torne-a a branch padrão do time
+# Se main já existir localmente, selecione-a; caso contrário, crie-a a partir da cópia.
+if git show-ref --verify --quiet refs/heads/main; then
+  git checkout main
+else
+  git checkout -b main
+fi
+git push -u origin main
+gh repo edit <IMMERSION_ORG>/immersion-team-01 --default-branch main
+
+# 5. Crie a branch de integração do time
 git checkout -b develop
 git push -u origin develop
 ```
@@ -155,7 +164,7 @@ git push -u origin develop
 Isso impede que qualquer pessoa, exceto um admin do repositório, faça push direto em `main`. Toda mudança precisa passar por um Pull Request.
 
 > [!NOTE]
-> Como o repositório é criado em uma organização dentro do Enterprise `software-gbb-workshops`, a proteção de branch deve estar disponível. Se você não vir a opção, peça a um facilitador para verificar as permissões.
+> Faça essa configuração somente no repositório do seu time. Se a opção de proteção não estiver disponível, peça ajuda para verificar as permissões da organização.
 
 ### Usando o site
 

@@ -15,15 +15,18 @@
 
 ---
 
-## Branches de idioma e de integração
+## Template e repositório de trabalho
 
-O kit publicado mantém a `main` como branch padrão em inglês e a `develop` como branch de integração em inglês.
-As branches permanentes `portugues-br` e `espanol` contêm documentação e instruções do Copilot em português do Brasil e espanhol, não trabalho de funcionalidades.
-Use o [seletor de idiomas](README.md#idiomas-do-repositório) para abrir qualquer edição.
+O template dos participantes é publicado somente na branch `portugues-br`.
+Não há outras edições de idioma para selecionar neste repositório.
 
-As branches de funcionalidades seguem o fluxo `develop` -> `main` descrito abaixo. Merges na `main` exigem CI verde e pelo menos uma revisão por pares.
-Para uma correção compartilhada, integre a mudança em inglês pela `develop`, depois porte e traduza a mudança pertinente para `portugues-br` e `espanol`.
-Mantenha correções específicas de idioma na respectiva branch. Nunca faça merge da árvore inteira de documentação em português na `main` ou na `develop`.
+Os comandos abaixo se aplicam ao **repositório criado pelo time**, não ao template compartilhado.
+Durante o [setup](00-SETUP.md#passo-3-clone-o-repositório-e-crie-a-branch-develop-só-o-líder),
+o líder prepara `main` e `develop` na cópia do time para o fluxo de trabalho da imersão.
+
+As branches de funcionalidades seguem o fluxo `develop` -> `main` descrito abaixo.
+Merges na `main` exigem CI verde e pelo menos uma revisão por pares.
+Não envie o trabalho dos participantes para o template compartilhado.
 
 ## O que cada conceito significa (referência rápida)
 

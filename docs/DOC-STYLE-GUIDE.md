@@ -3,7 +3,7 @@
 > **Trilha:** [Kit do Time](../README.md) › [Documentação](README.md) › **Guia de estilo da documentação**
 
 Este é o **contrato único de estilo** para TODOS os arquivos `.md` do repositório
-`datacorp-mm-team-kit`, **exceto** os que ficam em `.github/` (não os modifique).
+`datacorp-sifap-modernization-team-kit`, **exceto** os que ficam em `.github/` (não os modifique).
 
 Objetivo: documentação moderna, educativa, profissional e sóbria, sem emojis,
 sem analogias ao Super Mario e com diagramas Mermaid em tons neutros
@@ -17,11 +17,11 @@ sem analogias ao Super Mario e com diagramas Mermaid em tons neutros
 |---|---|
 | R1 | **Zero emojis.** Remova todos os emojis e caracteres pictográficos de títulos, tabelas, listas, destaques, blocos ASCII e corpo do texto. Substitua-os por palavras, badges cinza ou nada. |
 | R2 | **Zero analogias ao Super Mario / Nintendo.** Remova Mario, Luigi, Peach, Daisy, Rosalina, Toad, Yoshi, Koopa, Goomba, Bowser, princesa, castelo, cogumelo, power-up, mundo 1-1, cano verde, estrela de invencibilidade, mana, XP, `raid`, `game over`, `boss` e `co-op`. Consulte a §2 para ver o vocabulário substituto. |
-| R3 | **`hackathon`/`hackaton`/`workshop` → imersão.** O evento é uma imersão. Isso inclui nomes de diretórios de exemplo (`hackathon-team-XX` → `immersion-team-XX`), títulos e corpo do texto. As únicas exceções são identificadores reais que contêm a palavra: a organização `workshop-gbb`, o slug Enterprise `software-gbb-workshops`, o repositório `workshop-datacorp` e a tag de centro de custo `workshop-legacy-modernization` já aplicada ao lab implantado. |
+| R3 | **`hackathon`/`hackaton`/`workshop` → imersão.** O evento é uma imersão. Isso inclui nomes de diretórios de exemplo (`hackathon-team-XX` → `immersion-team-XX`), títulos e corpo do texto. Preserve identificadores técnicos reais, como a organização `serpro-workshop-fortaleza`, em URLs e comandos. |
 | R4 | **Este guia rege `docs/` e as pastas numeradas dos estágios, não `.github/`.** As primitivas do Copilot em `.github/` seguem seu próprio padrão estrutural (modelos de agente, prompt, instrução e skill); uma revisão de documentação não deve reestruturá-las como prosa. Links que *apontam para* `.github/...` continuam válidos e devem ser preservados. |
 | R5 | **Não invente novos fatos.** Preserve 100% das informações técnicas, comandos, caminhos, REQ-IDs, nomes de arquivos e tabelas de dados existentes. As mudanças tratam de forma, qualidade educativa e organização, não de fatos. |
 | R6 | **Não quebre links.** Ao renomear um arquivo, atualize todos os links que apontam para ele. Os caminhos relativos devem permanecer corretos. |
-| R7 | Mantenha a prosa da documentação em **inglês na `main` e na `develop`**, **português do Brasil na `portugues-br`** e **espanhol na `espanol`**. Siga a [política de idiomas](../README.md#idiomas-do-repositório); nomes nativos dos idiomas são permitidos no seletor, não seções traduzidas duplicadas na `main`. Preserve nomes de arquivos, caminhos, schemas, identificadores técnicos, comportamento do código e fontes legadas originais. As primitivas do Copilot ficam fora do escopo deste guia; seu idioma e sua estrutura seguem [`.github/PRIMITIVE-STANDARD.md`](../.github/PRIMITIVE-STANDARD.md). |
+| R7 | Mantenha a prosa desta edição em **português do Brasil** e respeite o [escopo do kit dos participantes](../README.md#escopo-do-kit-dos-participantes). Não crie seletores para edições ausentes. Preserve nomes de arquivos, caminhos, schemas, identificadores técnicos, comportamento do código e fontes legadas originais. As primitivas do Copilot ficam fora do escopo deste guia; seu idioma e sua estrutura seguem [`.github/PRIMITIVE-STANDARD.md`](../.github/PRIMITIVE-STANDARD.md). |
 
 ---
 
